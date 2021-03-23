@@ -52,9 +52,7 @@ procedure ReadRec(var P: TPas);
         readln(Count);
         writeln('Enter existance of hand luggage ("1" if "Yes", "0" if "No")');
         readln(i);
-        if i=0
-          then Exist:=false
-          else Exist:=true;
+        Exist:=i=0;
       end; {with P}
   end; {ReadRec}
 
@@ -79,7 +77,7 @@ begin {main}
   ReadNum(OKWeight);
   for i:= 1 to n do
     begin
-      writeln('Enter record น',i);
+      writeln('Enter record ยน',i);
       ReadRec(Pas[i]);
     end; {for i}
 
@@ -102,7 +100,7 @@ begin {main}
     if not Temp[i]
       then
         begin
-          writeln('Passenger น',i,':');
+          writeln('Passenger ยน',i,':');
           WriteRec(Pas[i]);
         end; {if Temp}
   readln;
