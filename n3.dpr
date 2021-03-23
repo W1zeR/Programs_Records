@@ -99,7 +99,7 @@ begin {main}
   ReadNum(V);
   for i:= 1 to n do
     begin
-      writeln('Enter record น',i);
+      writeln('Enter record ยน',i);
       ReadRec(Cubes[i]);
     end; {for i}
 
@@ -109,9 +109,7 @@ begin {main}
       begin
         if (Color=Blue) and (Mater=Metal)
           then inc(k);
-        if sqr(Lengt)*Lengt<=V
-          then Temp[i]:=true
-          else Temp[i]:=false;
+        Temp[i]:=sqr(Lengt)*Lengt<=V;
       end; {with Cubes}
 
   writeln;
@@ -124,7 +122,7 @@ begin {main}
     if Temp[i]
       then
         begin
-          writeln('Cube น',i,':');
+          writeln('Cube ยน',i,':');
           WriteRec(Cubes[i]);
         end; {if Temp}
   readln;
